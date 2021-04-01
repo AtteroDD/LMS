@@ -1,12 +1,8 @@
 <?php
 namespace controller;
 
-class Main {
+class Main extends \core\base\Controller {
 	public function indexAction() {
-		echo "index main";
-	}
-
-	public function faqAction() {
-		echo "faq";
+		
 	}
 }

@@ -36,6 +36,10 @@ class Router {
 						$route[$key] = $value;
 					}
 				}
+				$route['controller'] = self::format('controller', $route['controller']);
+				if(isset($route['action'])) {
+					$route['action'] = self::format('action', $route['action']);
+				}
 				if(!isset($route['action'])) {
 					$route['action'] = 'index';
 				}
@@ -48,15 +52,20 @@ class Router {
 
 	//переход по маршруту
 	public static function dispatch($url) {
+		$url = self::format('query', $url);
 		if(self::matchRoute($url)) {
-			$controller = 'controller\\'.self::format('controller', self::$route['controller']);
+			$controller = 'controller\\'.self::$route['controller'];
 			if(class_exists($controller)) {
-				$object = new $controller;
-				$action = self::format('action', self::$route['action']).'Action';
+				$object = new $controller(self::$route);
+				$action = self::$route['action'].'Action';
 				if(method_exists($object, $action)) {
 					$object->$action();
 				} else {
-					echo "action контроллера: ".$controller." не найден";
+					if(method_exists($object, 'indexAction')) {
+						$object->indexAction();
+					} else {
+						echo "action контроллера: ".$controller." не найден";
+					}
 				}
 			} else {
 				echo "контроллер: '".$controller."' не найден";
@@ -82,6 +91,18 @@ class Router {
 				$string = str_replace(' ', '', $string);
 				$string = lcfirst($string);
 				return $string;
+				break;
+			case 'query':
+				if($string) {
+					$params = explode('&', $string, 2);
+					if(false === strpos($params[0], '=')) {
+						return rtrim($params[0], '/');
+					} else {
+						return '';
+					}
+				} else {
+					return '';
+				}
 				break;
 			default:
 				echo "Не определен тип форматирования или строка форматирования пуста";

@@ -10,7 +10,7 @@ spl_autoload_register(function($class){
 		$prefix = $eFile[0];
 		unset($eFile[0]);
 
-		$file = implode($eFile);
+		$file = implode('/', $eFile);
 		switch ($prefix) {
 			case 'controller':
 				$file = APP.'/controllers/'.$file.'.php'; 
