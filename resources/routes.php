@@ -1,8 +1,6 @@
 <?php 
 
-
-core\Router::add('^news/?<alias:[a-z-]+>?$', ['controller' => 'News']);
-core\Router::add('^news/view/?<alias:[a-z-]+>?$', ['controller' => 'News']);
+core\Router::add('^news/?<id:[0-9]+>?$', ['controller' => 'News', 'action' => 'view']);
 
 //правила по умолчанию
 

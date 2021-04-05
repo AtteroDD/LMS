@@ -2,6 +2,7 @@
 require('const.php');
 require('modules/autoload.php');
 require(ROOT.'/resources/routes.php');
+require(ROOT.'/lib/libs.php');
 
 //режим отображения ошибок (настраивается в config.php)
 if($GLOBALS['config']['debugMode']) {

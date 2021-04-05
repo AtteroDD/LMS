@@ -60,9 +60,11 @@ class Router {
 				$action = self::$route['action'].'Action';
 				if(method_exists($object, $action)) {
 					$object->$action();
+					$object->getView();
 				} else {
 					if(method_exists($object, 'indexAction')) {
 						$object->indexAction();
+						$object->getView();
 					} else {
 						echo "action контроллера: ".$controller." не найден";
 					}

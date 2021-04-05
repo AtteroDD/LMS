@@ -3,13 +3,19 @@
 namespace core\base;
 
 abstract class Controller {
-	private $route;
-	private $view;
+	public $route;
+	public $view;
+	public $template;
+	public $vars = [];
 
 	public function __construct($route) {
 		$this->route = $route;
 		$this->view = $route['action'];
-		include VIEW.'/'.$route['controller'].'/'.$route['action'].'.php';
+	}
+
+	public function getView() {
+		$object = new View($this->route, $this->template, $this->view);
+		$object->render($this->vars);
 	}
 
 	public function indexAction() {

@@ -10,6 +10,5 @@ define('LIB', ROOT.'/lib');
 define('APP', ROOT.'/app');
 //директория views
 define('VIEW', APP.'/views');
-
-//текущая директория
-define('DIR', __DIR__);
+//директория шаблонов
+define('TEMPLATE', APP.'/templates');
