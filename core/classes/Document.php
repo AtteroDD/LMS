@@ -21,6 +21,24 @@ class Document {
 		}
 	}
 
+	public static function addImage($image, $alt = false, $class = false) {
+		if(is_file($image)) {
+			$img = '<img src="'.str_replace(ROOT, '', $image).'"';
+			if($class) {
+				$img .= '" class="'.$class.'"';
+			}
+			if($alt) {
+				$img .= '" alt="'.$alt.'"';
+			}
+			$img .= '>';
+
+			echo $img;
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	public static function placeScripts($content) {
 		if(array_key_exists('scripts', $GLOBALS)) {
 			$scripts = '';

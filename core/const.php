@@ -12,3 +12,5 @@ define('APP', ROOT.'/app');
 define('VIEW', APP.'/views');
 //директория шаблонов
 define('TEMPLATE', APP.'/templates');
+//директория со всеми изображениями
+define('GFX', ROOT.'/resources/gfx');

@@ -1,2 +1,2 @@
 <?php
-echo 'id = '.$GLOBALS['vars']['id'];
+echo "News";

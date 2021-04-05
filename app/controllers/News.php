@@ -7,6 +7,8 @@ class News extends \core\base\Controller {
 	}
 
 	public function viewAction() {
-		$this->vars['id'] = $this->route['id'];
+		if(array_key_exists('id', $this->route)) {
+			$this->vars['id'] = $this->route['id'];
+		}
 	}
 }
