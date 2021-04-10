@@ -3,6 +3,7 @@
 namespace core;
 
 class Document {
+	//добавление стиля со смещением
 	public static function addStyle($style) {
 		if(is_file($style)) {
 			$GLOBALS['styles'][] = $style;
@@ -12,6 +13,7 @@ class Document {
 		}
 	}
 
+	//добавление скрипта со смещением
 	public static function addScript($script) {
 		if(is_file($script)) {
 			$GLOBALS['scripts'][] = $script;
@@ -21,6 +23,7 @@ class Document {
 		}
 	}
 
+	//добавить изображение(через php)
 	public static function addImage($image, $alt = false, $class = false) {
 		if(is_file($image)) {
 			$img = '<img src="'.str_replace(ROOT, '', $image).'"';
@@ -39,6 +42,7 @@ class Document {
 		}
 	}
 
+	//размещение скриптов
 	public static function placeScripts($content) {
 		if(array_key_exists('scripts', $GLOBALS)) {
 			$scripts = '';
@@ -47,10 +51,11 @@ class Document {
 			}
 			return str_replace('<--scripts-->', $scripts, $content);
 		} else {
-			return $content;
+			return str_replace('<--scripts-->', '', $content);
 		}
 	}
 
+	//размещение стилей
 	public static function placeStyles($content) {
 		if(array_key_exists('styles', $GLOBALS)) {
 			$styles = '';
@@ -64,7 +69,7 @@ class Document {
 
 			return str_replace('<--styles-->', $styles, $content);
 		} else {
-			return $content;
+			return str_replace('<--styles-->', '', $content);
 		}
 	}
 }

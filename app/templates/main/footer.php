@@ -1,8 +1,13 @@
-		</main>
-	</div>
-	<footer>
+				</section>
+				<section class="right-menu">
+					
+				</section>
+			</div>
+			<footer>
 		
-	</footer>
+			</footer>
+		</section>
+	</main>
 	<--scripts-->
 </body>
 </html>

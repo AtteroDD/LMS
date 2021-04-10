@@ -10,6 +10,8 @@ define('LIB', ROOT.'/lib');
 define('APP', ROOT.'/app');
 //директория views
 define('VIEW', APP.'/views');
+//директория аддонов
+define('ADDON', APP.'/addons');
 //директория шаблонов
 define('TEMPLATE', APP.'/templates');
 //директория со всеми изображениями
