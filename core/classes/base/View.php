@@ -9,7 +9,7 @@ class View {
 
 	public function __construct($route, $template = '', $view = '') {
 		$this->route = $route;
-		$this->template = $template ?: $GLOBALS['config']['defaultTemplate'];
+		$this->template = $template ?: config('default_template');
 		if($view === false) {
 			$this-> view = false;
 		} else {
@@ -28,16 +28,16 @@ class View {
 				require $view_path;
 				require $template_path.'/footer.php';
 			} else {
-				echo 'шаблон не найден';
+				echo \core\Router::error('template');
 			}
 		} else {
-			echo 'вид не найден. '.$view_path;
+			echo \core\Router::error('view', $view_path);
 		}
 		$content = ob_get_clean();
 
 		if ($this->view !== false) {
-			$content = \core\Document::placeStyles($content);
-			$content = \core\Document::placeScripts($content);
+			$content = \core\structure\Document::placeStyles($content);
+			$content = \core\structure\Document::placeScripts($content);
 			echo $content;
 		}
 	}

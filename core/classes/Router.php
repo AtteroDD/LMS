@@ -66,16 +66,30 @@ class Router {
 						$object->indexAction();
 						$object->getView();
 					} else {
-						echo "action контроллера: ".$controller." не найден";
+						self::error($controller.'.action');
 					}
 				}
 			} else {
-				echo "контроллер: '".$controller."' не найден";
+				self::error($controller);
 			}
 		} else {
-			http_response_code(404);
-			echo "404";
+			self::error();
 		}
+	}
+
+	public static function error($debug = 'default') {
+		http_response_code(404);
+		$object = new \controller\Main(['controller' => 'Main', 'action' => 'error']);
+		if(config('debug_mode') == true) {
+			if($debug) {
+				$object->vars['debug'] = $debug;
+			} else {
+				$object->vars['debug'] = self::$route;
+			}
+		}
+		$object->vars['errorCode'] = 404;
+		$object->errorAction(); 
+		$object->getView();
 	}
 
 	//форматирование controller и action

@@ -1,10 +1,11 @@
 <?php
 
-namespace core;
+namespace core\structure;
 
 class Document {
 	//добавление стиля со смещением
 	public static function addStyle($style) {
+		$style = str_replace('\\', '/', $style);
 		if(is_file($style)) {
 			$GLOBALS['styles'][] = $style;
 			return true;
@@ -15,6 +16,7 @@ class Document {
 
 	//добавление скрипта со смещением
 	public static function addScript($script) {
+		$script = str_replace('\\', '/', $script);
 		if(is_file($script)) {
 			$GLOBALS['scripts'][] = $script;
 			return true;
@@ -25,6 +27,7 @@ class Document {
 
 	//добавить изображение(через php)
 	public static function addImage($image, $alt = false, $class = false) {
+		$image = str_replace('\\', '/', $image);
 		if(is_file($image)) {
 			$img = '<img src="'.str_replace(ROOT, '', $image).'"';
 			if($class) {
@@ -61,7 +64,7 @@ class Document {
 			$styles = '';
 			foreach ($GLOBALS['styles'] as $key) {
 				$styles .= '<link rel="stylesheet" href="'.str_replace(ROOT, '', $key);
-				if($GLOBALS['config']['debugMode']) {
+				if(config('debug_mode')) {
 					$styles .= '?'.time();
 				}
 				$styles .= '">';

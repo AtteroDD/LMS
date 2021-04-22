@@ -3,6 +3,8 @@
 core\Router::add('^news/?<id:[0-9]+>?$', ['controller' => 'News', 'action' => 'view']);
 
 core\Router::add('^auth$', ['controller' => 'Profile', 'action' => 'auth']);
+
+core\Router::add('^error/?<id:[0-9]+>?$', ['controller' => 'Main', 'action' => 'error']);
 //правила по умолчанию
 
 //адрес главной страницы

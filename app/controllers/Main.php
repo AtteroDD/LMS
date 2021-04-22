@@ -9,6 +9,9 @@ class Main extends \core\base\Controller {
 		//$this->view = "название вида"; // для подключения вида, отличного от названия action
 		//$this->template = "название шаблона"; // для подключения шаблона в action
 		//$this->vars = ["var1" => '5', "var2" => '10']; // передача переменных в вид
-		$this->vars['model'] = new \model\Main;
+	}
+
+	public function errorAction() {
+		$this->template = 'error';
 	}
 }

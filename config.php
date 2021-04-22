@@ -1,10 +1,10 @@
 <?php
-$GLOBALS['config'] = [
-	'rootDir' => __DIR__,
-	'debugMode' => true,
-	'defaultTemplate' => 'main',
+return [
+	//основной конфиг
+	'debug_mode' => true,
+	'default_template' => 'main',
 
-	'dsn' => 'mysql:host=localhost;dbname=LMS;charset=utf8',
+	//база данных
 	'db_user' => 'root',
-	'db_pass' => 'root',
+	'db_password' => 'root',
 ];

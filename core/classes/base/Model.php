@@ -7,7 +7,7 @@ abstract class Model {
 	protected $table;
 
 	public function __construct() {
-		$this->pdo = \core\Db::instance();
+		$this->pdo = \core\Database::instance();
 	}
 
 	public function query($query) {

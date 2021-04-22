@@ -6,8 +6,10 @@
 	<title>Document</title>
 	<--styles-->
 	<?php 
-	\core\Document::addStyle(ROOT.'/resources/fonts/roboto/roboto.css');
-	\core\Document::addStyle(__DIR__.'/styles/base.css');
+
+	addStyle(ROOT.'/resources/fonts/roboto/roboto.css');
+	addStyle(__DIR__.'/styles/base.css');
+
 	?>
 </head>
 <body>
@@ -19,6 +21,6 @@
 		<aside>
 		
 		</aside>
-		<section class="box">
+		<section class="box" style="background-image: url(resources/gfx/interface/backgrounds/ligh2t.png)">
 			<div class="content">
 				<section class="content">

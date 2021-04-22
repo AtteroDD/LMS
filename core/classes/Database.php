@@ -2,7 +2,7 @@
 
 namespace core;
 
-class Db {
+class Database {
 	private $pdo;
 	private static $instance;
 

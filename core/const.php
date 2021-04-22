@@ -1,7 +1,7 @@
 <?php
 
 //корень сайта
-define('ROOT', $GLOBALS['config']['rootDir']);
+define('ROOT', $_SERVER['DOCUMENT_ROOT']);
 //логическое ядро
 define('CORE', ROOT.'/core');
 //каталог библиотек
