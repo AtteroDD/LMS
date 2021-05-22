@@ -39,8 +39,7 @@ class Router {
 				$route['controller'] = self::format('controller', $route['controller']);
 				if(isset($route['action'])) {
 					$route['action'] = self::format('action', $route['action']);
-				}
-				if(!isset($route['action'])) {
+				} else {
 					$route['action'] = 'index';
 				}
 				self::$route = $route;
