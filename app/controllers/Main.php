@@ -1,6 +1,7 @@
 <?php
 namespace controller;
 
+
 class Main extends \core\base\Controller {
 	//public $template = "название шаблона"; // для подключения шаблона, отличного от стандартного
 
@@ -12,6 +13,11 @@ class Main extends \core\base\Controller {
 	}
 
 	public function errorAction() {
+
 		$this->template = 'error';
+	}
+
+	public function menuAction() {
+		$model = \model\User::create();
 	}
 }

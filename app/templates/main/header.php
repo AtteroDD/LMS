@@ -14,13 +14,6 @@
 </head>
 <body>
 	<header>
-		<a href="" class="logo"><p>УНИКИТ LMS</p><mark>student</mark></a>
-		<section></section>
+		
 	</header>
 	<main>
-		<aside>
-		
-		</aside>
-		<section class="box" style="background-image: url(resources/gfx/interface/backgrounds/ligh2t.png)">
-			<div class="content">
-				<section class="content">

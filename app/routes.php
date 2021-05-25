@@ -4,6 +4,8 @@ core\Router::add('^news/?<id:[0-9]+>?$', ['controller' => 'News', 'action' => 'v
 
 core\Router::add('^auth$', ['controller' => 'Profile', 'action' => 'auth']);
 
+core\Router::add('^menu$', ['controller' => 'Main', 'action' => 'menu']);
+
 core\Router::add('^error/?<id:[0-9]+>?$', ['controller' => 'Main', 'action' => 'error']);
 //правила по умолчанию
 

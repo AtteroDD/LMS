@@ -1,0 +1,10 @@
+section.shedule {
+	grid-area: shedule;
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 0 3px -2px #000000;
+}
+
+table.shedule {
+	
+}

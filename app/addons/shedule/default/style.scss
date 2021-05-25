@@ -1,0 +1,14 @@
+section.shedule {
+	display: flex;
+	flex-wrap: wrap;
+	grid-area: shedule;
+	padding: 4px;
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 0 3px -2px #000000;
+}
+
+table.shedule {
+	display: flex;
+	width: 100%;
+}

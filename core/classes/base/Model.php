@@ -9,7 +9,7 @@ abstract class Model {
 	public function __construct() {
 		$this->pdo = \core\Database::instance();
 	}
-
+	
 	public function query($query) {
 		return $this->pdo->execute($query);
 	}
