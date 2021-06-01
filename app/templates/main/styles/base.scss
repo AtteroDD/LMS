@@ -7,6 +7,7 @@ $accent: red;
 	margin: 0;
 	padding: 0;
 	border: none;
+	font-family: Roboto;
 }
 
 body {
@@ -19,19 +20,35 @@ body {
 }
 
 header {
-	margin-bottom: 10px;
 	width: 100%;
-	height: 64px;
-	background: $main;
+	height: 74px;
+	background: linear-gradient(15deg, #0f0d46 0%, #0e518e 100%);
 	box-shadow: 0 0 3px -2px $dark;
+	a.logo {
+		img {
+			user-select: none;
+			pointer-events: none;
+			height: 62px;
+			width: auto;
+			opacity: 1;
+		}
+	}
+}
+
+div.content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	width: calc(100vw - 20px);
+	max-width: 1480px;
+	height: 100%;
 }
 
 main {
-	display: grid;
-	grid-template-areas: "shedule shedule shedule shedule menu menu menu menu menu menu" 
-						 "shedule shedule shedule shedule menu menu menu menu menu menu";
-	grid-template-rows: repeat(2, 140px);
-	grid-template-columns: repeat(10, 1fr);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	padding: 0 10px;
 	width: calc(100vw - 20px);
 	max-width: 1880px;
@@ -45,5 +62,4 @@ hr.divider {
 footer {
 	width: 100%;
 	height: 20px;
-	background: red;
 }

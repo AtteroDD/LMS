@@ -1,80 +1,11 @@
 <?php addStyle(__DIR__.'/style.css');?>
 
-<section class="shedule">
-	<table class="shedule">
-		<tbody>
-			<tr>
-				<th>ПИ-406</th>
-				<th>Понедельник</th>
-				<th>Вторник</th>
-				<th>Среда</th>
-				<th>Четверг</th>
-				<th>Пятница</th>
-				<th>Суббота</th>
-			</tr>
-			<tr>
-				<th>1</th>
-				<th>русский</th>
-				<th></th>
-				<th></th>
-				<th>хз</th>
-				<th></th>
-				<th></th>
-			</tr>
-			<tr>
-				<th>2</th>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th></th>
-			</tr>
-			<tr>
-				<th>3</th>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th></th>
-			</tr>
-			<tr>
-				<th>4</th>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th></th>
-			</tr>
-			<tr>
-				<th>5</th>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th></th>
-			</tr>
-			<tr>
-				<th>6</th>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th></th>
-			</tr>
-			<tr>
-				<th>7</th>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th></th>
-			</tr>
-		</tbody>
-	</table>
-</section>
+<?php
+	$date = [1 => "Понедельник" , "Вторник" , "Среда" , "Четверг" , "Пятница" , "Суббота" , "Воскресенье"];
+?>
+
+<h1><?=$date[date("N")];?></h1>
+
+<div>
+	<p>1-4 пара</p>
+</div>

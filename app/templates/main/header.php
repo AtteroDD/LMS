@@ -14,6 +14,8 @@
 </head>
 <body>
 	<header>
-		
+		<div class="content">
+			<a href="/" class="logo"><img src="/resources/gfx/interface/logo.png" alt="Logo"></a>
+		</div>
 	</header>
 	<main>

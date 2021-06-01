@@ -7,6 +7,7 @@ abstract class Controller {
 	public $view;
 	public $template;
 	public $vars = [];
+	public $check = true;
 
 	public function __construct($route) {
 		$this->route = $route;
@@ -14,11 +15,16 @@ abstract class Controller {
 	}
 
 	public function getView() {
-		$object = new View($this->route, $this->template, $this->view);
+		$this->ext();
+		$object = new View($this->route, $this->check, $this->template, $this->view);
 		$object->render($this->vars);
 	}
 
 	public function indexAction() {
 
+	}
+
+	public function ext() {
+		
 	}
 }

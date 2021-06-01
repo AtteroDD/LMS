@@ -4,8 +4,11 @@ namespace controller;
 
 class Main extends \core\base\Controller {
 	//public $template = "название шаблона"; // для подключения шаблона, отличного от стандартного
+	public $check = true;
 
 	public function indexAction() {
+		$this->check = false;
+		\model\User::guestOnly();
 		//$this->view = false; // если необходимо не подключать шаблон и вид
 		//$this->view = "название вида"; // для подключения вида, отличного от названия action
 		//$this->template = "название шаблона"; // для подключения шаблона в action
@@ -13,11 +16,18 @@ class Main extends \core\base\Controller {
 	}
 
 	public function errorAction() {
-
-		$this->template = 'error';
+		$this->check = false;
+		$this->template = 'light';
 	}
 
 	public function menuAction() {
-		$model = \model\User::create();
+
+	}
+
+	public function ext() {
+		\model\User::session();
+		if($this->check) {
+			\model\User::create($this->check);
+		}
 	}
 }

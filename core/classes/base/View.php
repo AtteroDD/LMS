@@ -7,7 +7,7 @@ class View {
 	public $view;
 	public $template;
 
-	public function __construct($route, $template = '', $view = '') {
+	public function __construct($route, $check, $template = '', $view = '') {
 		$this->route = $route;
 		$this->template = $template ?: config('default_template');
 		if($view === false) {
