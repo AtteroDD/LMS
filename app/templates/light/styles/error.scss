@@ -31,6 +31,8 @@ section.error {
 			}
 		}
 		img {
+			user-select: none;
+			pointer-events: none;
 			width: 320px;
 			max-width: 32vw;
 		}

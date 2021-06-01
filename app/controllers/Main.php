@@ -8,6 +8,7 @@ class Main extends \core\base\Controller {
 
 	public function indexAction() {
 		$this->check = false;
+		$this->template = 'light';
 		\model\User::guestOnly();
 		//$this->view = false; // если необходимо не подключать шаблон и вид
 		//$this->view = "название вида"; // для подключения вида, отличного от названия action
