@@ -1,5 +1,15 @@
-
-table.shedule {
+section.menu {
+	margin-top: 18px;
 	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 	width: 100%;
+}
+
+div.link {
+	margin: 6px;
+	background: yellow;
+	img {
+		width: 240px;
+	}
 }

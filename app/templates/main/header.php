@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Document</title>
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	<--styles-->
-	<?php 
+	<?php addStyle(__DIR__.'/styles/base.css');?>
+	<?php addStyle(ROOT.'/resources/fonts/roboto/roboto.css');?>
 
-	addStyle(ROOT.'/resources/fonts/roboto/roboto.css');
-	addStyle(__DIR__.'/styles/base.css');
-
-	?>
 </head>
 <body>
 	<header>
-		<div class="content">
-			<a href="/" class="logo"><img src="/resources/gfx/interface/logo.png" alt="Logo"></a>
-
-			<section class="user">
-				<p>Овчинников Артём Олегович</p>
-				<a href="/exit"><img src="/app/templates/main/gfx/exit.png" alt=""></a>
-			</section>
-		</div>
+		<section class="container">
+			<a href="/" class="logo">
+				<img src="resources/gfx/logo.png" alt="logo">
+			</a>
+		</section>
 	</header>
-	<main>
+	<main class="container">

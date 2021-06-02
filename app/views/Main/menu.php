@@ -1,17 +1,13 @@
 <?php addStyle(APP.'/templates/main/styles/menu.css');?>
 
-<section class="shedule">
-	<?=\core\Addon::add('shedule');?>
-</section>
-<section class="notifications">
-	<?=\core\Addon::add('notifications');?>
-</section>
-<section class="links">
-	<?=\core\Addon::add('links');?>
-</section>
+<div class="widgets">
+	<section class="shedule">
+		<?php core\Addon::add('shedule');?>	
+	</section>
+	<section class="links">
+		<?php core\Addon::add('links');?>	
+	</section>	
+</div>
 <section class="menu">
-	<?=\core\Addon::add('menu');?>
-</section>
-<section class="group">
-	<?=\core\Addon::add('group');?>
+	<?php core\Addon::add('menu');?>	
 </section>
