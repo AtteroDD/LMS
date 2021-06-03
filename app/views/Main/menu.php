@@ -1,13 +1,13 @@
 <?php addStyle(APP.'/templates/main/styles/menu.css');?>
 
 <div class="widgets">
-	<section class="shedule">
+	<section class="shedule widget">
 		<?php core\Addon::add('shedule');?>	
 	</section>
-	<section class="links">
-		<?php core\Addon::add('links');?>	
+	<section class="info">
+		<?php core\Addon::add('info');?>	
 	</section>	
 </div>
-<section class="menu">
+<section class="menu widget">
 	<?php core\Addon::add('menu');?>	
 </section>

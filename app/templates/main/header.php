@@ -18,6 +18,10 @@
 			<a href="/" class="logo">
 				<img src="resources/gfx/logo.png" alt="logo">
 			</a>
+			<div class="profile">
+				<p>Иванов Иван Иванович</p>
+				<a href="/">Exit</a>
+			</div>
 		</section>
 	</header>
 	<main class="container">

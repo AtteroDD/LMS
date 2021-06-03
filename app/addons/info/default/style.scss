@@ -1,0 +1,29 @@
+section.info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: 20px;
+	flex-grow: 1;
+}
+
+div.notifications {
+	height: 160px;
+	width: 100%;
+}
+
+h1.info {
+	font-size: 22px;
+}
+
+div.links {
+	margin-top: 20px;
+	width: 100%;
+	flex-grow: 1;
+}
+
+@media screen and (max-width: 576px) {
+	section.info {
+		margin: 0;
+		width: 100%;
+	}	
+}

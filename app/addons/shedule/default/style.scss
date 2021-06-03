@@ -1,7 +1,8 @@
 section.shedule {
 	display: flex;
 	flex-direction: column;
-	width: 68%;
+	width: calc(70% - 40px);
+	padding: 10px;
 	table {
 		display: flex;
 		flex-direction: column;
@@ -11,19 +12,24 @@ section.shedule {
 		thead {
 			display: flex;
 			flex-direction: column;
+			flex-grow: 1;
 			tr {
 				display: flex;
 				height: 32px;
 				width: 100%;
+				font-size: 18px;
+				font-weight: bold;
 				td {
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					background: red;
+					background: #5F5FEF;
+					color: #ffffff;
+					flex-grow: 1;
 					width: 80%;
 					&:first-child {
-						margin-right: 8px;
-						width: 170px;
+						margin-right: 2px;
+						width: 70px;
 					}
 				}
 			}
@@ -36,21 +42,38 @@ section.shedule {
 				display: flex;
 				flex-direction: row;
 				flex-grow: 1;
-				margin-top: 8px;
-				width: 100%;
+				margin-top: 2px;
 				td {
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
+					flex-grow: 1;
 					align-items: center;
-					background: #E6E6E6;
+					background: #EDEDF4;
+					min-height: 38px;
 					width: 80%;
 					&:first-child {
-						margin-right: 8px;
-						width: 170px;
+						margin-right: 2px;
+						width: 70px;
+					}
+					p {
+						display: flex;
+						margin: 0;
+						font-size: 14px;
+						&:first-child {
+							font-size: 18px;
+							font-weight: bold;
+						}
 					}
 				}
 			}
 		}
 	}
+}
+
+@media screen and (max-width: 576px) {
+	section.shedule {
+		width: 100%;
+		margin-bottom: 20px;
+	}	
 }

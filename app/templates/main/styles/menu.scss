@@ -2,9 +2,18 @@ div.widgets {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	section {
-		padding: 24px;
-		background: #ffffff;
-		box-shadow: 0 0 5px -1px #000000;
-	}
+}
+
+
+.widget {
+	padding: 10px;
+	background: #ffffff;
+	box-shadow: 0 0 5px -3px #000000;
+}
+
+@media screen and (max-width: 576px) {
+	div.widgets {
+		flex-direction: column;
+		align-items: center;
+	}	
 }
