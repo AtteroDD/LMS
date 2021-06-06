@@ -20,7 +20,7 @@
 			</a>
 			<div class="profile">
 				<p>Иванов Иван Иванович</p>
-				<a href="/">Exit</a>
+				<a href="/"><img src="resources/gfx/interface/exit.png" alt="exit"></a>
 			</div>
 		</section>
 	</header>

@@ -7,8 +7,12 @@ section.info {
 }
 
 div.notifications {
-	height: 160px;
+	display: flex;
+	flex-direction: column;
 	width: 100%;
+	p {
+		word-wrap: break-word;
+	}
 }
 
 h1.info {
@@ -16,6 +20,8 @@ h1.info {
 }
 
 div.links {
+	display: flex;
+	flex-direction: column;
 	margin-top: 20px;
 	width: 100%;
 	flex-grow: 1;
