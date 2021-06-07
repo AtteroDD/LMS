@@ -4,8 +4,8 @@ namespace model;
 class User extends \core\base\Model {
 
 	public function __construct() {
-
 		$db = \core\Database::instance();
+
 		$check = $db->query('SELECT * FROM users WHERE mail = "'.$_COOKIE['mail'].'" AND password = "'.$_COOKIE['password'].'";');
 		if($check == []) {
 			header('Location: /');
@@ -14,6 +14,7 @@ class User extends \core\base\Model {
 	}
 
 	public static function guestOnly() {
+
 	}
 
 	public static function session() {
@@ -39,4 +40,5 @@ class User extends \core\base\Model {
 		}
 		return false;
 	}
+
 }
